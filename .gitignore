@@ -1,0 +1,93 @@
+# General
+.DS_Store
+Thumbs.db
+*.log
+*.out
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+.env
+.env.local
+.vscode/
+.idea/
+node_modules/
+dist/
+build/
+coverage/
+
+# Frontend (React/Next.js)
+frontend/node_modules/
+frontend/.next/
+frontend/.vercel/
+frontend/.env
+frontend/.env.local
+frontend/public/static/.cache/
+frontend/package-lock.json
+frontend/yarn.lock
+
+# Backend (FastAPI / Python)
+backend/__pycache__/
+backend/.venv/
+backend/env/
+backend/instance/
+backend/db.sqlite3
+backend/db.sqlite
+backend/migrations/
+backend/.env
+backend/venv/
+backend/requirements.txt.lock
+backend/.pytest_cache/
+
+# Virtual Environments
+venv/
+env/
+.venv/
+Pipfile.lock
+poetry.lock
+
+# Data & Logs
+data/
+*.sqlite
+*.sqlite3
+*.db
+*.csv
+*.tsv
+*.json
+*.xml
+*.parquet
+logs/
+*.log
+nohup.out
+
+# Docker
+docker-compose.override.yml
+docker-compose.yaml
+backend/Dockerfile
+frontend/Dockerfile
+*.dockerignore
+
+# Deployment & IDE
+/.vercel/
+.npm/
+.next/
+firebase-debug.log
+functions/node_modules/
+public/static/
+
+# Ignore CI/CD Configs (if needed)
+/.github/workflows/
+terraform.tfstate
+terraform.tfstate.backup
+.idea/
+.vscode/
+.vs/
+
+# Ignore Mac and Linux System Files
+*.swp
+*.swo
+*.swn
+*.bak
+*.orig
+*.sublime-project
+*.sublime-workspace
