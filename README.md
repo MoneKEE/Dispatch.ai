@@ -1,6 +1,9 @@
 # 📌 Introduction 
 **Dispatch.ai** A Load Board Aggregator that consolidates freight load information from multiple sources into one unified platform. This project aims to simplify the search for freight loads, offering real-time updates and a user-friendly interface for carriers, brokers, and shippers.
 
+
+---
+
 ## 🚀 Features
 
 - 🔎 **Aggregates load board data** from multiple sources via APIs or web scraping.
@@ -10,8 +13,11 @@
 - 🔐 **Secure user authentication** with JWT/Firebase/Auth0.
 - 📍 **Integrated mapping** with Google Maps API for route optimization.
 
-## 📂 Project Structure
 
+---
+
+## 📂 Project Structure
+```ruby
 Dispatch.ai/
 │── frontend/                 # React/Next.js project
 │   ├── public/               # Static assets
@@ -47,7 +53,56 @@ Dispatch.ai/
 │── .gitignore                # Ignore unnecessary files
 │── README.md                 # Project description
 │── LICENSE                   # Open-source license (MIT, Apache, etc.)
+```
 
+---
+
+## 🚀 Tech Stack
+
+### **Frontend**
+- ⚛ **React.js** (Next.js for SSR)
+- 🎨 **Tailwind CSS** for styling
+- 🔄 **Redux Toolkit / React Query** for state management
+- 📡 **Axios** for API calls
+
+### **Backend**
+- 🐍 **FastAPI** (Python) for REST API
+- 🗄 **PostgreSQL / MongoDB** for data storage
+- 🔥 **Redis** for caching
+- ⏳ **Celery / BullMQ** for background jobs
+- 🛠 **Scrapy / Puppeteer** for load data aggregation
+
+### **Cloud & Deployment**
+- ☁ **AWS / Vercel / Firebase** for hosting
+- 🐳 **Docker** for containerization
+- 🔄 **CI/CD** with GitHub Actions
+
+---
+
+## 🛠️ Setup & Installation
+
+### **Clone the Repository**
+```sh
+git clone https://github.com/your-username/Dispatch.ai.git
+cd dispatch.ai
+
+```
+
+### **Set up the frontend**
+```sh
+cd frontend
+npm install  # or yarn install
+
+```
+
+### **Set up the backend**
+```sh
+cd ../backend
+pip install -r requirements.txt
+
+```
+
+### **Set up environment variables**
 
 # Getting Started
 TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:

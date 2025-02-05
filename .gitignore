@@ -17,14 +17,14 @@ build/
 coverage/
 
 # Frontend (React/Next.js)
-frontend/node_modules/
-frontend/.next/
-frontend/.vercel/
+#frontend/node_modules/
+#frontend/.next/
+#frontend/.vercel/
 frontend/.env
-frontend/.env.local
-frontend/public/static/.cache/
-frontend/package-lock.json
-frontend/yarn.lock
+#frontend/.env.local
+#frontend/public/static/.cache/
+#frontend/package-lock.json
+#frontend/yarn.lock
 
 # Backend (FastAPI / Python)
 backend/__pycache__/
