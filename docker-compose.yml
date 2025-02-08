@@ -1,0 +1,42 @@
+version: '3.8'
+services:
+  server:
+    build: ./server
+    container_name: dispatch-ai-server
+    ports:
+      - "3001:3001"
+    environment:
+      # .env can also be used , but here's a simple example
+      - DB_NAME=dispatch_db
+      - DB_USER=postgres
+      - DB_PASS=secret
+      - DB_HOST=db  # This is the name of the service in the docker-compose file
+      - DB_PORT=5432
+    depends_on:
+      - db
+
+  client:
+    build: ./client
+    container_name: dispatch-ai-client
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://localhost:3001
+    depends_on:
+      - server
+
+  db:
+    image: postgres:15-alpine
+    container_name: dispatch-ai-db
+    environment:
+      - POSTGRES_DB=dispatch_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=secret
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+      # The volume ensures that the dat persists between container restarts
+
+volumes:
+  db-data:
